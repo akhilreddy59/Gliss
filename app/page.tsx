@@ -6,26 +6,29 @@ import { ParticleBackground } from '@/components/ParticleBackground';
 import { DecidrApp } from '@/components/DecidrApp';
 import { LandingPage } from '@/components/LandingPage';
 import { CombinedLoader } from '@/components/CombinedLoader';
+import { ParticleTextEffect } from '@/components/ParticleTextEffect';
 import { AnimatePresence, motion } from 'motion/react';
 
 export default function Home() {
-  const [isLoading, setIsLoading] = useState(true);
-  const [isAppLaunched, setIsAppLaunched] = useState(false);
+  // 0: Heart Loader, 1: Particle Text, 2: Landing Page, 3: App
+  const [stage, setStage] = useState(0);
 
   useEffect(() => {
-    // Simulate loading time for the initial animation
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 3500); // 3.5 seconds
-    return () => clearTimeout(timer);
-  }, []);
+    if (stage === 0) {
+      // Simulate loading time for the initial animation
+      const timer = setTimeout(() => {
+        setStage(1);
+      }, 3500); // 3.5 seconds
+      return () => clearTimeout(timer);
+    }
+  }, [stage]);
 
   return (
     <main className="relative min-h-screen overflow-hidden bg-vanta">
       <CustomCursor />
       
       <AnimatePresence mode="wait">
-        {isLoading ? (
+        {stage === 0 && (
           <motion.div
             key="loader"
             initial={{ opacity: 1 }}
@@ -35,7 +38,22 @@ export default function Home() {
           >
             <CombinedLoader />
           </motion.div>
-        ) : !isAppLaunched ? (
+        )}
+        
+        {stage === 1 && (
+          <motion.div
+            key="particle-text"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0, filter: 'blur(10px)' }}
+            transition={{ duration: 1 }}
+            className="absolute inset-0 z-40"
+          >
+            <ParticleTextEffect onComplete={() => setStage(2)} />
+          </motion.div>
+        )}
+
+        {stage === 2 && (
           <motion.div
             key="landing"
             initial={{ opacity: 0 }}
@@ -44,9 +62,11 @@ export default function Home() {
             transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
             className="absolute inset-0 z-10 overflow-y-auto"
           >
-            <LandingPage onLaunch={() => setIsAppLaunched(true)} />
+            <LandingPage onLaunch={() => setStage(3)} />
           </motion.div>
-        ) : (
+        )}
+
+        {stage === 3 && (
           <motion.div
             key="app"
             initial={{ opacity: 0 }}

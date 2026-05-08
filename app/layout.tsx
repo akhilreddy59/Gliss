@@ -19,14 +19,14 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: 'Decidr | Sovereign Intelligence Engine',
+  title: 'Gliss | Sovereign Intelligence Engine',
   description: 'The Sovereign Intelligence Engine for Product Trade-offs',
 };
 
 export default function RootLayout({children}: {children: React.ReactNode}) {
   return (
     <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable} ${playfair.variable} dark`}>
-      <body className="font-sans antialiased bg-vanta text-white selection:bg-amethyst selection:text-white" suppressHydrationWarning>
+      <body className="font-sans antialiased bg-vanta text-white selection:bg-emerald selection:text-white" suppressHydrationWarning>
         {children}
       </body>
     </html>

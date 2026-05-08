@@ -1,11 +1,12 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+@plugin "@tailwindcss/typography";
 
 @theme {
   --color-vanta: #000000;
-  --color-amethyst: #534AB7;
-  --color-violet: #8B5CF6;
-  --color-magenta: #D946EF;
+  --color-emerald: #10b981;
+  --color-cyan: #06b6d4;
+  --color-teal: #14b8a6;
   --color-crimson: #EF4444;
   --color-glass: rgba(255, 255, 255, 0.01);
   --color-glass-border: rgba(255, 255, 255, 0.1);
@@ -24,11 +25,11 @@
   }
 
   .text-glow {
-    text-shadow: 0 0 15px rgba(217, 70, 239, 0.6);
+    text-shadow: 0 0 15px rgba(20, 184, 166, 0.6);
   }
 
-  .inner-glow-amethyst {
-    box-shadow: inset 0 0 20px rgba(83, 74, 183, 0.5);
+  .inner-glow-emerald {
+    box-shadow: inset 0 0 20px rgba(16, 185, 129, 0.5);
   }
 
   .digital-flicker {
@@ -36,7 +37,7 @@
   }
 
   .volumetric-rays {
-    background: radial-gradient(ellipse at top, rgba(139, 92, 246, 0.15) 0%, transparent 60%);
+    background: radial-gradient(ellipse at top, rgba(6, 182, 212, 0.15) 0%, transparent 60%);
     mix-blend-mode: screen;
   }
   
@@ -69,9 +70,9 @@ body {
   background: var(--color-vanta);
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--color-amethyst);
+  background: var(--color-emerald);
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-magenta);
+  background: var(--color-teal);
 }
