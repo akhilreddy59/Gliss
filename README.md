@@ -63,5 +63,5 @@ Full transparency into the AI's internal monologue. View the step-by-step reason
 ### Installation
 1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/your-username/gliss.git](https://github.com/your-username/gliss.git)
+   git clone [https://github.com/akhilreddy59/Gliss.git](https://github.com/akhilreddy59/Gliss.git)
    cd gliss
