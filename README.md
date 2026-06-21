@@ -1,10 +1,6 @@
 # ✦ Decidr | Product Decision Intelligence
 > The Sovereign 3D Reasoning Engine for Probabilistic Product Trade-offs.
 
-# Run and deploy your AI Studio app
-[![Version](https://img.shields.io/badge/Version-1.0.0--beta-534AB7?style=for-the-badge)](https://github.com/your-username/decidr)
-[![Tech Stack](https://img.shields.io/badge/Stack-Next.js_15_|_Three.js_|_Claude_3.5-000000?style=for-the-badge)](https://decidr.ai)
-
 This contains everything you need to run your app locally.
 ## 🔭 Overview
 **Gliss** is a generative intelligence platform designed to navigate the "Fundamental Mismatch" between deterministic software requirements and non-deterministic AI behavior. 
