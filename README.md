@@ -63,5 +63,5 @@ Full transparency into the AI's internal monologue. View the step-by-step reason
 ### Installation
 1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/your-username/decidr.git](https://github.com/your-username/gliss.git)
-   cd decidr
+   git clone [https://github.com/your-username/gliss.git](https://github.com/your-username/gliss.git)
+   cd gliss
