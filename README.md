@@ -1,4 +1,4 @@
-<img src="assets/readme/hero.svg" width="100%" alt="Gliss — Sovereign Intelligence Engine for Product Trade-offs" />
+<img src="assets/hero.svg" width="100%" alt="Gliss — Sovereign Intelligence Engine for Product Trade-offs" />
 
 <p align="center">
   <a href="https://decidr-orpin.vercel.app"><img src="https://img.shields.io/badge/demo-live-10b981?style=for-the-badge&labelColor=000000" alt="Live demo" /></a>
@@ -14,9 +14,9 @@ Product decisions rarely fail from a lack of ideas. They fail because a requirem
 
 ## How it works
 
-<img src="assets/readme/divider.svg" width="100%" alt="" />
+<img src="assets/divider.svg" width="100%" alt="" />
 
-<img src="assets/readme/flow.svg" width="100%" alt="Gliss flow: a goal and constraint go into a Gemini 3.1 Pro structured schema call, which returns conflict severity, trade-off scoring, and a reasoning trail" />
+<img src="assets/flow.svg" width="100%" alt="Gliss flow: a goal and constraint go into a Gemini 3.1 Pro structured schema call, which returns conflict severity, trade-off scoring, and a reasoning trail" />
 
 You describe a goal and a constraint. Gliss sends both to **Gemini 3.1 Pro** as a structured schema call and gets back three things:
 
@@ -26,13 +26,13 @@ You describe a goal and a constraint. Gliss sends both to **Gemini 3.1 Pro** as 
 
 ## Interface
 
-<img src="assets/readme/divider.svg" width="100%" alt="" />
+<img src="assets/divider.svg" width="100%" alt="" />
 
 The UI runs as a scroll-driven 3D scene rather than a form: a particle field that assembles on load, glass panels with real blur and refraction, and a custom cursor that reads as a light source moving through the space. It's built for a portfolio demo first, a daily tool second — worth knowing before you judge it by SaaS-dashboard conventions.
 
 ## Stack
 
-<img src="assets/readme/divider.svg" width="100%" alt="" />
+<img src="assets/divider.svg" width="100%" alt="" />
 
 Verified against `package.json` and the source, not copied from an old draft:
 
@@ -47,7 +47,7 @@ Verified against `package.json` and the source, not copied from an old draft:
 
 ## Run it locally
 
-<img src="assets/readme/divider.svg" width="100%" alt="" />
+<img src="assets/divider.svg" width="100%" alt="" />
 
 **Prerequisites:** Node.js 20+, a Gemini API key.
 
@@ -63,6 +63,6 @@ Open `http://localhost:3000`. First screen is the loader; give it a few seconds 
 
 ## Status
 
-<img src="assets/readme/divider.svg" width="100%" alt="" />
+<img src="assets/divider.svg" width="100%" alt="" />
 
 Solo project, active development. No license file yet — treat the code as all-rights-reserved until one is added. Issues and forks welcome regardless.
