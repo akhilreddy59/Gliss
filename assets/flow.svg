@@ -1,0 +1,67 @@
+<svg viewBox="0 0 1200 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Gliss processing flow: product goal and constraint go to Gemini 3.1 Pro, which returns a structured conflict severity score, trade-off paths, and an audit trail">
+  <defs>
+    <linearGradient id="flowBg" x1="0" y1="0" x2="1200" y2="300" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#000000"/>
+      <stop offset="1" stop-color="#04100c"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#10b981" opacity="0.7"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="300" fill="url(#flowBg)"/>
+  <rect x="1" y="1" width="1198" height="298" rx="16" fill="none" stroke="#ffffff" stroke-opacity="0.08"/>
+
+  <!-- Node 1: input -->
+  <g transform="translate(50,100)">
+    <rect width="220" height="110" rx="12" fill="#ffffff" fill-opacity="0.03" stroke="#ffffff" stroke-opacity="0.12"/>
+    <text x="18" y="30" font-family="'SFMono-Regular', Consolas, monospace" font-size="11" letter-spacing="2" fill="#06b6d4">01 · INPUT</text>
+    <text x="18" y="58" font-family="Inter, Helvetica, Arial, sans-serif" font-size="14" fill="#ffffff">Product goal +</text>
+    <text x="18" y="78" font-family="Inter, Helvetica, Arial, sans-serif" font-size="14" fill="#ffffff">hard constraint</text>
+    <text x="18" y="98" font-family="Inter, Helvetica, Arial, sans-serif" font-size="12" fill="#ffffff" opacity="0.5">e.g. "High Security, Zero Budget"</text>
+  </g>
+
+  <line x1="270" y1="155" x2="345" y2="155" stroke="#10b981" stroke-width="1.5" marker-end="url(#arrow)" opacity="0.7"/>
+
+  <!-- Node 2: reasoning engine -->
+  <g transform="translate(350,85)">
+    <rect width="240" height="140" rx="12" fill="#ffffff" fill-opacity="0.03" stroke="#10b981" stroke-opacity="0.4"/>
+    <text x="18" y="30" font-family="'SFMono-Regular', Consolas, monospace" font-size="11" letter-spacing="2" fill="#10b981">02 · REASONING</text>
+    <text x="18" y="58" font-family="Inter, Helvetica, Arial, sans-serif" font-size="14" fill="#ffffff">Gemini 3.1 Pro</text>
+    <text x="18" y="78" font-family="Inter, Helvetica, Arial, sans-serif" font-size="14" fill="#ffffff">structured schema call</text>
+    <text x="18" y="106" font-family="'SFMono-Regular', Consolas, monospace" font-size="11" fill="#ffffff" opacity="0.5">conflict_severity: int</text>
+    <text x="18" y="122" font-family="'SFMono-Regular', Consolas, monospace" font-size="11" fill="#ffffff" opacity="0.5">recommendations[]</text>
+  </g>
+
+  <line x1="600" y1="155" x2="675" y2="155" stroke="#10b981" stroke-width="1.5" marker-end="url(#arrow)" opacity="0.7"/>
+
+  <!-- Node 3: outputs, three stacked -->
+  <g transform="translate(680,45)">
+    <rect width="230" height="62" rx="10" fill="#ffffff" fill-opacity="0.03" stroke="#ef4444" stroke-opacity="0.35"/>
+    <text x="16" y="24" font-family="'SFMono-Regular', Consolas, monospace" font-size="11" letter-spacing="1.5" fill="#ef4444">CONFLICT DETECTOR</text>
+    <text x="16" y="44" font-family="Inter, Helvetica, Arial, sans-serif" font-size="12" fill="#ffffff" opacity="0.6">flags elasticity-threshold breaks</text>
+  </g>
+  <g transform="translate(680,119)">
+    <rect width="230" height="62" rx="10" fill="#ffffff" fill-opacity="0.03" stroke="#06b6d4" stroke-opacity="0.35"/>
+    <text x="16" y="24" font-family="'SFMono-Regular', Consolas, monospace" font-size="11" letter-spacing="1.5" fill="#06b6d4">TRADE-OFF MATRIX</text>
+    <text x="16" y="44" font-family="Inter, Helvetica, Arial, sans-serif" font-size="12" fill="#ffffff" opacity="0.6">scores feasibility / risk / velocity</text>
+  </g>
+  <g transform="translate(680,193)">
+    <rect width="230" height="62" rx="10" fill="#ffffff" fill-opacity="0.03" stroke="#10b981" stroke-opacity="0.35"/>
+    <text x="16" y="24" font-family="'SFMono-Regular', Consolas, monospace" font-size="11" letter-spacing="1.5" fill="#10b981">AUDIT TRAIL</text>
+    <text x="16" y="44" font-family="Inter, Helvetica, Arial, sans-serif" font-size="12" fill="#ffffff" opacity="0.6">exposes the reasoning chain</text>
+  </g>
+
+  <line x1="600" y1="155" x2="670" y2="76" stroke="#ffffff" stroke-width="1" opacity="0.15"/>
+  <line x1="600" y1="155" x2="670" y2="150" stroke="#ffffff" stroke-width="1" opacity="0.15"/>
+  <line x1="600" y1="155" x2="670" y2="224" stroke="#ffffff" stroke-width="1" opacity="0.15"/>
+
+  <!-- final node -->
+  <line x1="910" y1="150" x2="975" y2="150" stroke="#10b981" stroke-width="1.5" marker-end="url(#arrow)" opacity="0.7"/>
+  <g transform="translate(980,100)">
+    <rect width="170" height="110" rx="12" fill="#ffffff" fill-opacity="0.03" stroke="#ffffff" stroke-opacity="0.12"/>
+    <text x="18" y="30" font-family="'SFMono-Regular', Consolas, monospace" font-size="11" letter-spacing="2" fill="#06b6d4">03 · OUTPUT</text>
+    <text x="18" y="58" font-family="Inter, Helvetica, Arial, sans-serif" font-size="14" fill="#ffffff">Ranked</text>
+    <text x="18" y="78" font-family="Inter, Helvetica, Arial, sans-serif" font-size="14" fill="#ffffff">architectural paths</text>
+  </g>
+</svg>
